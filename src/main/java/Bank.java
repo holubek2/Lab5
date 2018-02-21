@@ -7,11 +7,16 @@
  *
  * @see <a href="https://cs125.cs.illinois.edu/lab/8/">Lab 8 Description</a>
  */
-public class Bank {
-
-    public String bankName;
-
-    public Bank() {
+public final class Bank {
+    /**
+     * Defines a class named bank
+     */
+    private String bankName;
+    /**
+     * Defines an object named bankName, represents name of bank
+     */
+    public string getBankName
+    private Bank() {
         bankName = "Illini Bank";
     }
 
@@ -25,10 +30,11 @@ public class Bank {
      * @param amount to withdraw (double)
      * @return boolean
      */
-    public boolean withdrawMoney(final BankAccount bankAccount, final double amount) {
-        /*
-         * Implement this function
-         */
+    public void withdrawMoney(final BankAccount bankAccount, final double amount) {
+        if (!(amount <= 0)) {
+            return;
+        }
+        return null;
     }
 
     /**
@@ -41,10 +47,25 @@ public class Bank {
      * @param amount to deposit
      * @return boolean
      */
-    public boolean depositMoney(final BankAccount bankAccount, final double amount) {
+    public void depositMoney(final BankAccount bankAccount, final double amount) {
         /*
          * Implement this function
          */
+    }
+
+    /**
+     * Transfer money from one account to another.
+     * <p>
+     * Transfer the amount of money from one back account to another. Returns true if transaction is
+     * successful, false otherwise.
+     *
+     * @return boolean
+     */
+
+    public void transferMoney() {
+        double bankAccount = 0;
+        BankAccount amount = null;
+        transferMoney(amount, bankName, bankAccount);
     }
 
     /**
@@ -59,8 +80,8 @@ public class Bank {
      * @return boolean
      */
 
-    public boolean transferMoney(final BankAccount source, final BankAccount destination,
-            final double amount) {
+    public void transferMoney(final BankAccount source, final BankAccount destination,
+                              final double amount) {
         /*
          * Implement this function
          */
@@ -72,25 +93,29 @@ public class Bank {
      * @param bankAccount to change
      * @param name new name to set
      */
+public boolean transferMoney(final BankAccount source, final BankAccount destination, final double amount) {
 
     public void changeOwnerName(final BankAccount bankAccount, final String name) {
         /*
          * Implement this function
          */
     }
-
-    public static int totalAccounts = 0;
+    /**
+     * Total number of bank accounts opened
+     */
+    private static int totalAccounts = 0;
     /**
      * Uses static variable to get number of bank accounts opened.
      *
      * @return the total number of accounts
      */
-    public static int getNumberOfAccount() {
+    public static void getNumberOfAccount() {
         /*
          * Implement this function
          */
     }
-
+    }
+}
     /**
      * Main method for testing.
      *
@@ -103,7 +128,7 @@ public class Bank {
         System.out.println("We are excited to have you banking with us!\n\n");
 
         // Create Bank Accounts
-        BankAccount account1 = new BankAccount("John Doe", BankAccount.BankAccountType.CHECKINGS);
+        BankAccount account1 = new BankAccount("John Doe", BankAccount.BankAccountType.CHECKING);
         System.out.println("Bank account for John Doe created");
 
         BankAccount account2 = new BankAccount("Jony Ive", BankAccount.BankAccountType.STUDENT);

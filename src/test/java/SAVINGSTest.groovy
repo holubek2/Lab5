@@ -1,0 +1,2 @@
+class SAVINGSTest extends GroovyTestCase {
+}
